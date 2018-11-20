@@ -1,0 +1,22 @@
+video {
+    -webkit-filter: brightness(50%);
+-moz-filter: brightness(50%);
+filter: brightness(50%);
+}
+
+@media screen and (min-width: 736px) {
+    #myVideo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #myVideo {
+        display: none;
+    }
+}
