@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/video.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/morphext.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload">
@@ -38,7 +40,7 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Christan Lagarde</h2>
+							<h2 style="color: #e2a216;"><span id="js-rotating">Etre supporter de soi-même/Le golf est 95% mental</span></h2>
 							<!-- <p>Etre le meilleur <br />
 							de soi-même <i class="fas fa-golf-ball"></i></p> -->
 							<!-- <ul class="actions special">
@@ -83,6 +85,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/showdown.min.js"></script>
+			<script src="assets/js/morphext.min.js"></script>
 
 			<script>
 
@@ -101,6 +104,19 @@
 				  .then(function () {
 				    // always executed
 				  });
+
+
+				  $("#js-rotating").Morphext({
+				    // The [in] animation type. Refer to Animate.css for a list of available animations.
+				    animation: "fadeIn",
+				    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+				    separator: "/",
+				    // The delay between the changing of each phrase in milliseconds.
+				    speed: 3000,
+				    complete: function () {
+				        // Called after the entrance animation is executed.
+				    }
+				});
 			</script>
 
 	</body>
