@@ -89,7 +89,7 @@
 
 				axios.get('https://hackmd.io/s/B1WqmglkN/download')
 				  .then(function (response) {
-				    var converter = new showdown.Converter();
+				    var converter = new showdown.Converter({metadata: true});
 					var md = response.data;
 					var html = converter.makeHtml(md);
 				    $('#md-content').html(html);
