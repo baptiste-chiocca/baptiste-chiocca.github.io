@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Chirstian Lagarde - Etre le meilleur de soi-même</title>
+		<title>Christian Lagarde - Etre le meilleur de soi-même</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -29,6 +29,10 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Accueil</a></li>
+											<li><a href="hypnose.html">Hypnose</a></li>
+											<li><a href="pnl.html">PNL</a></li>
+											<li><a href="sophrologie.html">Sophrologie</a></li>
+											<li><a href="psychologie-positive.html">Pschologie Positive</a></li>
 									</div>
 								</li>
 							</ul>
@@ -38,14 +42,14 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Christan Lagarde</h2>
+							<h2 style="color: #e2a216;">être le meilleur de soi même</h2>
 							<!-- <p>Etre le meilleur <br />
 							de soi-même <i class="fas fa-golf-ball"></i></p> -->
 							<!-- <ul class="actions special">
 								<li><a href="#" class="button primary">Activate</a></li>
 							</ul> -->
 						</div>
-						<a href="#one" class="more scrolly">En savoir plus</a>
+						<a href="#md-content" class="more scrolly"></a>
 					</section>
 
 				<!-- Main -->
@@ -93,6 +97,8 @@
 					var md = response.data;
 					var html = converter.makeHtml(md);
 				    $('#md-content').html(html);
+				    var metadata = converter.getMetadata();
+				    console.log(metadata)
 				  })
 				  .catch(function (error) {
 				    // handle error

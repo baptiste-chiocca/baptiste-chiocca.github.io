@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>Christian Lagarde - Etre le meilleur de soi-même</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,18 +14,18 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Spectral</a></h1>
+						<h1><a href="index.html">Christan Lagarde</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="index.html">Accueil</a></li>
+											<li><a href="hypnose.html">Hypnose</a></li>
+											<li><a href="pnl.html">PNL</a></li>
+											<li><a href="sophrologie.html">Sophrologie</a></li>
+											<li><a href="psychologie-positive.html">Pschologie Positive</a></li>
 										</ul>
 									</div>
 								</li>
@@ -41,11 +36,10 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Generic Page</h2>
-							<p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+							<h2 id="title"></h2>
 						</header>
 						<section class="wrapper style5">
-							<div class="inner">
+							<div id="md-content" class="inner">
 
 								<h3>Lorem ipsum dolor</h3>
 								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
@@ -80,6 +74,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -87,6 +82,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/showdown.min.js"></script>
+
+
+			<script>
+
+
+				axios.get('https://hackmd.io/GKRFkfIBQnSLDK6SqovJug/download')
+				  .then(function (response) {
+				    var converter = new showdown.Converter({metadata: true});
+					var md = response.data;
+					var html = converter.makeHtml(md);
+				    $('#md-content').html(html);
+				    var metadata = converter.getMetadata();
+				    $('#title').html(metadata.title);
+				  })
+				  .catch(function (error) {
+				    // handle error
+				    console.log(error);
+				  })
+				  .then(function () {
+				    // always executed
+				  });
+			</script>
 
 	</body>
 </html>

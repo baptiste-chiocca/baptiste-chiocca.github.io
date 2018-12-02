@@ -3564,6 +3564,7 @@ input, select, textarea {
 	}
 
 		#banner h2 {
+			top: -200px;
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
