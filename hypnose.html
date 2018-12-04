@@ -89,7 +89,7 @@
 					html = emoji.replace_colons(html);
 				    $('#md-content').html(html);
 				    var metadata = converter.getMetadata();
-				    console.log(metadata)
+				    $('#title').html(metadata.title);
 				  })
 				  .catch(function (error) {
 				    // handle error
