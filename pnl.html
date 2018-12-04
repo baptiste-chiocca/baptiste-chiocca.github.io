@@ -79,11 +79,15 @@
 				axios.get('https://hackmd.io/LqJKHED5Ried8KhjbmsSOA/download')
 				  .then(function (response) {
 				    var converter = new showdown.Converter({metadata: true});
+				    var emoji = new EmojiConvertor();
+				    emoji.img_sets.apple.path = 'assets/img-apple-64/';
+
 					var md = response.data;
 					var html = converter.makeHtml(md);
+					html = emoji.replace_colons(html);
 				    $('#md-content').html(html);
 				    var metadata = converter.getMetadata();
-				    $('#title').html(metadata.title);
+				    console.log(metadata)
 				  })
 				  .catch(function (error) {
 				    // handle error
