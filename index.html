@@ -61,19 +61,19 @@
 				</h1>
 
 			</div>
-			<a href="#md-content" class="more scrolly"></a>
+			<a href="#main" class="more scrolly"></a>
 		</section>
 
 		<!-- Main -->
 		<article id="main">
 			<section class="wrapper style5">
-				<div class="inner">
+				<div id="page-top" class="inner">
 					<ul class="actions fit">
-						<li><a class="button fit" href="index.html">Accueil</a></li>
-						<li><a class="button fit" href="hypnose.html">Hypnose</a></li>
-						<li><a class="button fit" href="pnl.html">PNL</a></li>
-						<li><a class="button fit" href="sophrologie.html">Sophrologie</a></li>
-						<li><a class="button fit" href="psychologie-positive.html">Pschologie Positive</a></li>
+						<li><a class="button fit success" href="index.html">Accueil</a></li>
+						<li><a class="button fit primary" href="hypnose.html">Hypnose</a></li>
+						<li><a class="button fit info" href="pnl.html">PNL</a></li>
+						<li><a class="button fit danger" href="sophrologie.html">Sophrologie</a></li>
+						<li><a class="button fit purple" href="psychologie-positive.html">Pschologie Positive</a></li>
 					</ul>
 				</div>
 				<div id="md-content" class="inner">
@@ -109,6 +109,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/showdown.min.js"></script>
+	<script src="assets/js/showdown-youtube.min.js"></script>
 	<script src="assets/js/emoji.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
@@ -116,6 +117,7 @@
 		axios.get('https://hackmd.io/s/B1WqmglkN/download')
 			.then(function (response) {
 				var converter = new showdown.Converter({
+					extensions: ['youtube'],
 					metadata: true
 				});
 				var emoji = new EmojiConvertor();
