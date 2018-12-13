@@ -110,6 +110,7 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/showdown.min.js"></script>
 	<script src="assets/js/showdown-youtube.min.js"></script>
+	<script src="assets/js/showdown-palign.min.js"></script>
 	<script src="assets/js/emoji.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
@@ -117,7 +118,7 @@
 		axios.get('https://hackmd.io/s/B1WqmglkN/download')
 			.then(function (response) {
 				var converter = new showdown.Converter({
-					extensions: ['youtube'],
+					extensions: ['youtube', 'palign'],
 					metadata: true
 				});
 				var emoji = new EmojiConvertor();
