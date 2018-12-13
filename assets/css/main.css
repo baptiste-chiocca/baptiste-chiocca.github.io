@@ -3654,7 +3654,7 @@ input, select, textarea {
 	}
 
 		#banner h2 {
-			top: -200px;
+			top: -100px;
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
@@ -4133,3 +4133,7 @@ input, select, textarea {
 	80% { opacity: 0; }
 	100% { opacity: 0; }
 }
+
+img.avatar {
+	border-radius: 50%;
+  }

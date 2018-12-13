@@ -55,9 +55,18 @@
 								<li><a href="#" class="button primary">Activate</a></li>
 							</ul> -->
 				<h1 class="ml4">
-					<span class="letters letters-1">Premiere citation...</span>
-					<span class="letters letters-2">Deuxieme citation...</span>
-					<span class="letters letters-3">Troisieme citation...</span>
+					<span class="letters letters-1">Le golf se joue sur un parcours de 25 cm, l’espace entre vos oreilles (Bobby Jones)
+					</span>
+					<span class="letters letters-2">Il n’existe rien de constant, si ce n’est le changement (Bouddha)</span>
+					<span class="letters letters-3">Concentre-toi sur les solutions et non sur les erreurs (Jack Nicklaus)</span>
+					<span class="letters letters-4">La tête vous fait rater beaucoup plus de coups que le corps (Tommy Bolt)</span>
+					<span class="letters letters-5">Vous savez beaucoup plus que vous croyez savoir (Milton Erickson)</span>
+					<span class="letters letters-6">Nous sommes ce que nous pensons. Tout ce que nous sommes résulte de nos pensées. <br> Avec nos pensées, nous bâtissons notre monde. (Bouddha)</span>
+					<span class="letters letters-7">C’est surprenant comme c’est facile de rentrer un putt de 15 mètres, une fois le trou perdu</span>
+					<span class="letters letters-8">Je ne pense jamais au futur. Il vient bien assez tôt (Albert Einstein)</span>
+					<span class="letters letters-9">L'imagination est plus importante que le savoir (Albert Einstein)</span>
+					<span class="letters letters-10">Notre tête est ronde pour permettre à la pensée de changer de direction (Francis Picabia)</span>
+					<span class="letters letters-11">Travaillez l'intérieur et l'extérieur suivra (Constant Winnerman)</span>
 				</h1>
 
 			</div>
@@ -148,49 +157,26 @@
 		ml4.durationOut = 5000;
 		ml4.delay = 0;
 
-		anime.timeline({
-				loop: true
+		var timeline = anime.timeline({
+			loop: true
+		})
+		for (i = 1; i<=11; i++) {
+			timeline.add({
+				targets: '.ml4 .letters-' + i,
+				opacity: ml4.opacityIn,
+				scale: ml4.scaleIn,
+				duration: ml4.durationIn,
+				easing: "linear"
 			})
-			.add({
-				targets: '.ml4 .letters-1',
-				opacity: ml4.opacityIn,
-				scale: ml4.scaleIn,
-				duration: ml4.durationIn,
-				easing: "linear"
-			}).add({
-				targets: '.ml4 .letters-1',
+			timeline.add({
+				targets: '.ml4 .letters-' + i,
 				opacity: 0,
 				scale: ml4.scaleOut,
 				duration: ml4.durationOut,
 				easing: "linear",
 				delay: ml4.delay
-			}).add({
-				targets: '.ml4 .letters-2',
-				opacity: ml4.opacityIn,
-				scale: ml4.scaleIn,
-				duration: ml4.durationIn,
-				easing: "linear"
-			}).add({
-				targets: '.ml4 .letters-2',
-				opacity: 0,
-				scale: ml4.scaleOut,
-				duration: ml4.durationOut,
-				easing: "linear",
-				delay: ml4.delay
-			}).add({
-				targets: '.ml4 .letters-3',
-				opacity: ml4.opacityIn,
-				scale: ml4.scaleIn,
-				duration: ml4.durationIn,
-				easing: "linear"
-			}).add({
-				targets: '.ml4 .letters-3',
-				opacity: 0,
-				scale: ml4.scaleOut,
-				duration: ml4.durationOut,
-				easing: "linear",
-				delay: ml4.delay,
-			});
+			})
+		}
 	</script>
 
 </body>
