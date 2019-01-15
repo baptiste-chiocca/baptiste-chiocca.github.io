@@ -140,8 +140,8 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px;
-		color: inherit;
+		border-bottom: solid 1px;
+		color: #00abe9;
 		text-decoration: none;
 	}
 
@@ -244,7 +244,7 @@ input, select, textarea {
 	blockquote {
 		border-left: solid 4px #fff;
 		font-style: italic;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
@@ -2126,7 +2126,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		padding-left: 1em;
 	}
 
@@ -4144,12 +4144,11 @@ img.avatar {
 
   .menu-btn {
 	  display: inline;
-	  margin-left: 10px;
 	  padding: 6px 13px;
   }
   
   .menu-btn-first {
-	  margin-left: 300px;
+	  margin-left: 5px;
   }
 
 @media screen and (max-width: 736px) {
