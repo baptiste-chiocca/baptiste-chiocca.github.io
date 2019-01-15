@@ -4142,12 +4142,18 @@ img.avatar {
 	border-radius: 50%;
   }
 
-.menu-btn {
-	display: inline;
-	margin-left: 10px;
-	padding: 6px 13px;
-}
+  .menu-btn {
+	  display: inline;
+	  margin-left: 10px;
+	  padding: 6px 13px;
+  }
+  
+  .menu-btn-first {
+	  margin-left: 300px;
+  }
 
-.menu-btn-first {
-	margin-left: 300px;
+@media screen and (max-width: 736px) {
+	.menu-btn {
+		display: none;
+	}
 }
