@@ -3918,7 +3918,7 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			#main > header {
-				padding: 2em 0 2em 0 ;
+				padding: 1em 0 1em 0 ;
 			}
 
 		}
@@ -3926,7 +3926,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#main > header {
-				padding: 2em 3em 2em 3em ;
+				padding: 1em 3em 1em 3em ;
 			}
 
 		}
@@ -4145,6 +4145,7 @@ img.avatar {
   .menu-btn {
 	  display: inline;
 	  padding: 6px 13px;
+	  font-size: 11px;
   }
   
   .menu-btn-first {
@@ -4155,4 +4156,25 @@ img.avatar {
 	.menu-btn {
 		display: none;
 	}
+}
+
+iframe {
+	float: right;
+	margin: 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+img {
+	float: left;
+	margin-right: 20px;
+}
+
+#tabs {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	white-space: nowrap;
 }
