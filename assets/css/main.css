@@ -4173,8 +4173,9 @@ img {
 }
 
 #tabs {
-	margin-left: auto;
+	margin-left: 280px;
 	margin-right: auto;
 	width: 80%;
 	white-space: nowrap;
+	overflow-x: scroll;
 }
