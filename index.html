@@ -131,6 +131,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 	<script>
+		$(window).on('load', function() {
+			 
+		})
+	</script>
+	<script>
 		axios.get('https://hackmd.io/s/B1WqmglkN/download')
 			.then(function (response) {
 				var converter = new showdown.Converter({
@@ -152,7 +157,11 @@
 				console.log(error);
 			})
 			.then(function () {
-				// always executed
+				jQuery(document.links)
+				.filter(function() {
+					return this.hostname != window.location.hostname; 
+				})
+				.attr('target', '_blank');
 			});
 
 
